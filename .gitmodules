@@ -1,0 +1,3 @@
+[submodule "xaringan_columns"]
+	path = xaringan_columns
+	url = https://github.com/emilyriederer/xaringan_columns
