@@ -1,0 +1,116 @@
+---
+title: "Presentation template"
+author: 'Lasse Hansen'
+date: 14 april 2021
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: ["xaringan-themer.css", "hygge"]
+    nature:
+      highlightStyle: github
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE, echo = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  #base_color = "#007ac2",
+  base_color = "#003d73",
+#  header_font_google = google_font("Josefin #Sans"),
+  header_font_google = google_font("Oswald"),
+  text_font_google   = google_font("Roboto", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  
+)
+
+
+style_extra_css(
+  css = list(
+    ".fade" = list(opacity = "0.5")
+  )
+)
+
+
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra("tile_view")
+
+pacman::p_load(knitr, showtext, ggplot2)
+
+font_add_google("Oswald", "Oswald")
+showtext_auto()
+theme_set(theme_minimal(base_size = 22, base_family = "Oswald"))
+
+
+```
+
+class: center, inverse, middle
+
+# Template presentation
+### Lasse Hansen<br>.white[lasse.hansen@clin.au.dk]
+### 14 April 2021 
+
+<img src="utils/aulogo_uk_var2_white.png"; style="max-width:250px;
+position:absolute;left: 10px; bottom: 10px;">
+
+---
+
+class: center, middle
+
+# Physical classes?
+
+---
+
+## Presentations
+
+.large[
+- __ETS__
+
+- __ARIMA__
+
+- __Prophet__
+
+- __Hidden Markov Models__
+
+- __Gaussian Processes__
+]
+
+
+---
+
+## Presentations
+
+.large[
+Prepare a 7-15 minute presentation on your method of choice for next class (20 April). Use the following bullets to guide your presentations:]
+
+.large[
+
+- What type of time series data is the model appropriate for? When should you use this type of model compared to simpler methods?
+
+- What is the motivation and intuition behind the method? Explain how the method works in the simplest way possible
+
+- How does it actually work?  Don't dive too deep into the math, but present the amount necessary for a high-level understanding
+
+- How to use it in R/Python. You don't need to go through an example, but please provide links to helpful packages/libraries.
+
+- A list of references so your fellow students can read up on the models.
+
+
+]
+
+
+
+```{r echo=FALSE}
+#pagedown::chrome_print("class_9.html")
+```
+
